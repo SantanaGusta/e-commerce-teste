@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
       price: 500.00,
       imageUrl: 'assets/bolsaa.avif',
     ),
-    // Add more products as needed
+    // Adicione mais produtos conforme necessário
   ];
 
   @override
@@ -40,6 +40,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.black, // Altera a cor de fundo para preto
         appBar: AppBar(
           title: Text('Couro Premium'),
         ),
@@ -69,14 +70,14 @@ class MyApp extends StatelessWidget {
                       padding: EdgeInsets.all(8.0),
                       child: Text(
                         products[index].name,
-                        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black), // Altera a cor do texto para branco
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.all(8.0),
                       child: Text(
                         products[index].description,
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 16, color: Colors.black), // Altera a cor do texto para branco
                       ),
                     ),
                   ],
@@ -117,17 +118,17 @@ class ProductDetailScreen extends StatelessWidget {
               children: [
                 Text(
                   product.name,
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black), // Altera a cor do texto para branco
                 ),
                 SizedBox(height: 8.0),
                 Text(
                   product.description,
-                  style: TextStyle(fontSize: 18),
+                  style: TextStyle(fontSize: 18, color: Colors.black), // Altera a cor do texto para branco
                 ),
                 SizedBox(height: 8.0),
                 Text(
                   '\$${product.price}',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black), // Altera a cor do texto para branco
                 ),
               ],
             ),
